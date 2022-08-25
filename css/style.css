@@ -192,6 +192,10 @@ p, a {
 
 /* end header */
 
+.main-header {
+  display: none;
+}
+
 /* special offer*/
 
 .sec-special__container {
@@ -313,7 +317,7 @@ p, a {
 
 .sec-services__item {
   padding: 191px 126px 35px 45px;
-  max-width: 573px;
+  width: calc((100% - 24px) / 2);
 
   border-radius: 15px;
 }
@@ -350,7 +354,7 @@ p, a {
                 linear-gradient(#fff, #fff);
 }
 
-.sec_services__link {
+.sec-services__link {
   padding-right: 20px;
 
   font-size: 20px;
@@ -366,16 +370,20 @@ p, a {
 
 /* advantages */
 
+.sec-advantages {
+  margin-bottom: 48px;
+}
+
 .sec-advantages__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
 .sec-advantages__item {
   margin-bottom: 22px;
   padding: 116px 42px 32px 45px;
-  max-width: 276px;
+  width: calc((100% - (3 * 24px)) / 4);
 
   border-radius: 15px;
 }
@@ -384,49 +392,45 @@ p, a {
   margin-right: 22px;
 }
 
+.sec-advantages__item:last-child {
+  margin-right: 0;
+}
+
+.sec-advantages__item  {
+  background: #fff no-repeat top 42px left 45px;
+}
 
 .sec-advantages__item:nth-child(1) {
-  background: url("../img/benefits/bathtub.svg") no-repeat top 42px left 45px;
-  background-color: #fff;
+  background-image: url("../img/benefits/bathtub.svg");
 }
 
 .sec-advantages__item:nth-child(2) {
-  background: url("../img/benefits/hanger.svg") no-repeat top 42px left 45px;
-  background-color: #fff;
+  background-image: url("../img/benefits/hanger.svg");
 }
 
 .sec-advantages__item:nth-child(3) {
-  background: url("../img/benefits/heating.svg") no-repeat top 42px left 45px;
-  background-color: #fff;
+  background-image: url("../img/benefits/heating.svg");
 }
 
 .sec-advantages__item:nth-child(4) {
-  background: url("../img/benefits/hotel-key.svg") no-repeat top 42px left 45px;
-  background-color: #fff;
+  background-image: url("../img/benefits/hotel-key.svg");
 }
 
 .sec-advantages__item:nth-child(5) {
-  background: url("../img/benefits/parking.svg") no-repeat top 42px left 45px;
-  background-color: #fff;
-  margin-bottom: 0;
+  background-image: url("../img/benefits/parking.svg");
 }
 
 .sec-advantages__item:nth-child(6) {
-  background: url("../img/benefits/reception.svg") no-repeat top 42px left 45px;
-  background-color: #fff;
-  margin-bottom: 0;
+  background-image: url("../img/benefits/reception.svg");
 }
 
 .sec-advantages__item:nth-child(7) {
-  background: url("../img/benefits/security-box.svg") no-repeat top 42px left 45px;
-  background-color: #fff;
-  margin-bottom: 0;
+  background-image: url("../img/benefits/security-box.svg");
 }
 
-.sec-advantages__item:nth-child(8) {
-  background: url("../img/benefits/swimming-pool.svg") no-repeat top 42px left 45px;
-  background-color: #fff;
-  margin-bottom: 0;
+.sec-advantages__item:nth-child(8),
+.sec-advantages__item:nth-child(9) {
+  background-image: url("../img/benefits/swimming-pool.svg");
 }
 
 /* end advantages */
@@ -448,7 +452,7 @@ p, a {
   border-radius: 15px;
 }
 
-.sec-placemen__image {
+.sec-placement__image {
   display: block;
   border-radius: 15px 15px 0 0;
 
@@ -460,13 +464,25 @@ p, a {
 
 .sec-placement__top-block {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   margin-bottom: 16px;
 }
 
-.sec-placement__cost--gray {
+.sec-placement__star-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sec-placement__accommodation-star {
+  margin-right: 6px;
+}
+
+.sec-placement__cost {
+  margin-right: 52px;
+}
+
+.sec-placement__cost-pre {
   color: #999;
 }
 
@@ -500,7 +516,7 @@ p, a {
   background-size: cover;
 }
 
-.sec_placement__link {
+.sec-placement__link {
   padding-right: 16px;
   font-size: 20px;
   line-height: 40px;
@@ -510,7 +526,7 @@ p, a {
   background: url('../img/icons/arrow_right_white.svg') no-repeat right center;
 }
 
-.sec_placement__link::before {
+.sec-placement__link::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -574,22 +590,22 @@ p, a {
   border-radius: 10px;
 }
 
-.sec_contacts__left-block {
+.sec-contacts__left-block {
   margin-right: 52px;
   width: 100%
 }
 
-.sec-contacs__img {
+.sec-contacts__img {
   max-width: 653px;
 
   border-radius: 10px;
 }
 
-.sec_contacts__list {
+.sec-contacts__list {
   max-width: 100%;
 }
 
-.sec_contacts__item {
+.sec-contacts__item {
   display: flex;
 
   margin-bottom: 25px;
@@ -599,12 +615,12 @@ p, a {
   border-bottom: 1px solid #E9E9E9;
 }
 
-.sec_contacts__name-left {
+.sec-contacts__name-left {
   margin-right: 47px;
   width: 100px;
 }
 
-.sec_contacts__name-left {
+.sec-contacts__name-left {
   font-size: 20px;
   line-height: 20px;
   font-weight: 700;
@@ -612,7 +628,7 @@ p, a {
   color: #000;
 }
 
-.sec-contact__item-right {
+.sec-contacts__item-right {
   max-width: 229px;
 }
 
@@ -658,12 +674,12 @@ p, a {
   border-radius: 10px;
 }
 
-.footer_left-block {
+.footer__left-block {
   margin-right: 125px;
   max-width: 302px;
 }
 
-.footer_centr-block {
+.footer__centr-block {
   margin-right: 269px;
   max-width: 359px;
 }
