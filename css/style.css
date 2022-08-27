@@ -257,6 +257,7 @@ p, a {
   display: flex;
   justify-content: space-between;
   padding: 0 45px;
+  max-height: 70px;
 
   border-radius: 15px;
   background-color: #fff;
@@ -264,7 +265,7 @@ p, a {
 
 .header-nav__list {
   display: flex;
-
+  max-height: 70px;
 }
 
 .header-nav__item {
@@ -276,6 +277,10 @@ p, a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__button {
+  max-height: 42px;
 }
 
 .header__button:first-child {
@@ -303,6 +308,7 @@ p, a {
 .sec-special__offer-left {
   padding: 40px 45px;
   max-width: 573px;
+  max-height: 258px;
 
   border-radius: 15px;
 }
@@ -584,6 +590,7 @@ p, a {
 
 .sec-placement__content-block {
   padding: 32px 45px 45px 45px;
+  max-height: 440px;
 }
 
 .sec-placement__top-block {
@@ -604,6 +611,7 @@ p, a {
 
 .sec-placement__cost {
   margin-right: 52px;
+  max-height: 20px;
 }
 
 .sec-placement__cost-pre {
@@ -623,7 +631,7 @@ p, a {
 }
 
 .sec-placement__hotel-address {
-  margin-bottom: 33px;
+  margin-bottom: 20px;
 
   line-height: 16px;
 
@@ -670,6 +678,10 @@ p, a {
 
   background-color:#E9E9E9;
   border-radius: 10px;
+}
+
+.sec-form__heading {
+  margin-left: 0;
 }
 
 .sec-form__main-form {
